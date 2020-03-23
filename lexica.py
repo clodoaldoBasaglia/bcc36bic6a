@@ -53,15 +53,18 @@ class Lexica:
         t.type = self.reservadas.get(t.value, 'IDENTIFICADOR')
         return t
 
+    def t_FLUTUANTE(self,t):
+        r'\d+\.\d+'
+        t.type= self.reservadas.get(t.value,'FLUTUANTE')
+        return t
+
+
     def t_INTEIRO(self, t):
         r'[+|-]?\d+'
         t.type = self.reservadas.get(t.value, 'INTEIRO')
         return t
 
-    def t_FLUTUANTE(self,t):
-        r'\d+\.\d+'
-        t.type= self.reservadas.get(t.value,'FLUTUANTE')
-        return t
+
 
     def t_NOTACAO_CIENTIFICA(self, t):
         r'[+|-]?[0-9]+(\.[0-9]+)(e(\+|\-)?(\d+))?'
