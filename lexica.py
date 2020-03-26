@@ -54,7 +54,7 @@ class Lexica:
         return t
 
     def t_FLUTUANTE(self,t):
-        r'\d+\.\d+'
+        r'[+|-]?\d+\.\d+'
         t.type= self.reservadas.get(t.value,'FLUTUANTE')
         return t
 
