@@ -8,7 +8,7 @@ class Lexica:
         self.lexer = lex.lex(debug=False, module=self)
 
     reservadas = {
-        'inteiro': 'INTEIRO',
+        'inteiro': 'NUM_INTEIRO',
         'flutuante': 'FLUTUANTE',
         'retorna': 'RETORNA',
         'se':'SE',
@@ -22,14 +22,14 @@ class Lexica:
         'escreva':'ESCREVA'
     }
     tokens = [
-                 'SOMA', 'SUBTRACAO', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
-                 'MENOR_IGUAL', 'ABRE_PAR', 'FECHA_PAR', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 'IDENTIFICADOR', 'NEGACAO',
+                 'MAIS', 'SUBTRACAO', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
+                 'MENOR_IGUAL', 'ABRE_PARENTESE', 'FECHA_PARENTESE', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 'ID', 'NEGACAO',
                  'DOIS_PONTOS', 'ATRIBUICAO', 'VIRGULA','ABRE_CHAVES','FECHA_CHAVES','COMENTARIO','NOTACAO_CIENTIFICA'
              ] + list(reservadas.values())
 
     t_ABRE_CHAVES=r'\{'
     t_FECHA_CHAVES = r'\}'
-    t_SOMA = r'\+'
+    t_MAIS = r'\+'
     t_SUBTRACAO = '-'
     t_MULTIPLICACAO = '\*'
     t_DIVISAO = r'\/'
@@ -38,8 +38,8 @@ class Lexica:
     t_MENOR = r'\<'
     t_MAIOR_IGUAL = r'>='
     t_MENOR_IGUAL = r'<='
-    t_ABRE_PAR = r'\('
-    t_FECHA_PAR = r'\)'
+    t_ABRE_PARENTESE = r'\('
+    t_FECHA_PARENTESE = r'\)'
     t_ABRE_COLCHETE = r'\['
     t_FECHA_COLCHETE = r'\]'
     t_NEGACAO = r'!'
@@ -48,9 +48,9 @@ class Lexica:
     t_VIRGULA = r'\,'
     t_ignore = ' \t'
 
-    def t_IDENTIFICADOR(self, t):
+    def t_ID(self, t):
         r'[a-zA-Zà-ú][0-9_a-zà-úA-Z]*'
-        t.type = self.reservadas.get(t.value, 'IDENTIFICADOR')
+        t.type = self.reservadas.get(t.value, 'ID')
         return t
 
     def t_FLUTUANTE(self,t):
@@ -59,9 +59,9 @@ class Lexica:
         return t
 
 
-    def t_INTEIRO(self, t):
+    def t_NUM_INTEIRO(self, t):
         r'[+|-]?\d+'
-        t.type = self.reservadas.get(t.value, 'INTEIRO')
+        t.type = self.reservadas.get(t.value, 'NUM_INTEIRO')
         return t
 
 
