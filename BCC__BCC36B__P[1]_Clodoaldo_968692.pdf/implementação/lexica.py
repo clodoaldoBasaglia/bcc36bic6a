@@ -23,7 +23,7 @@ class Lexica:
     }
     tokens = [
                  'SOMA', 'SUBTRACAO', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
-                 'MENOR_IGUAL', 'ABRE_PAR', 'FECHA_PAR', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 'IDENTIFICADOR', 'NEGACAO',
+                 'MENOR_IGUAL', 'ABRE_PAR', 'FECHA_PAR', 'ABRE_COL', 'FECHA_COL', 'IDENTIFICADOR', 'NEGACAO',
                  'DOIS_PONTOS', 'ATRIBUICAO', 'VIRGULA','ABRE_CHAVES','FECHA_CHAVES','COMENTARIO','NOTACAO_CIENTIFICA'
              ] + list(reservadas.values())
 
@@ -40,8 +40,8 @@ class Lexica:
     t_MENOR_IGUAL = r'<='
     t_ABRE_PAR = r'\('
     t_FECHA_PAR = r'\)'
-    t_ABRE_COLCHETE = r'\['
-    t_FECHA_COLCHETE = r'\]'
+    t_ABRE_COL = r'\['
+    t_FECHA_COL = r'\]'
     t_NEGACAO = r'!'
     t_DOIS_PONTOS = r':'
     t_ATRIBUICAO = r':\='
@@ -91,7 +91,7 @@ class Lexica:
             t = lex.token()
             if not t:
                 break
-            print(t.type)
+            print(t)
 
 
 def main():
