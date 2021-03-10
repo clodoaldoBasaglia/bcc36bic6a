@@ -95,7 +95,6 @@ class Lexica:
 
 
 def main():
-    print("Lexicanum")
     codigo = io.open(sys.argv[1], mode='r', encoding="utf-8")
     adeptus = Lexica()
     adeptus.test(codigo.read())
