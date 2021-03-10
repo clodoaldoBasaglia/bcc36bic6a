@@ -22,7 +22,7 @@ class Lexica:
         'escreva':'ESCREVA'
     }
     tokens = [
-                 'MAIS', 'SUBTRACAO', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
+                 'MAIS', 'MENOS', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
                  'MENOR_IGUAL', 'ABRE_PARENTESE', 'FECHA_PARENTESE', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 'ID', 'NEGACAO',
                  'DOIS_PONTOS', 'ATRIBUICAO', 'VIRGULA','ABRE_CHAVES','FECHA_CHAVES','COMENTARIO','NOTACAO_CIENTIFICA'
              ] + list(reservadas.values())
@@ -30,7 +30,7 @@ class Lexica:
     t_ABRE_CHAVES=r'\{'
     t_FECHA_CHAVES = r'\}'
     t_MAIS = r'\+'
-    t_SUBTRACAO = '-'
+    t_MENOS = '-'
     t_MULTIPLICACAO = '\*'
     t_DIVISAO = r'\/'
     t_IGUALDADE = r'\='
