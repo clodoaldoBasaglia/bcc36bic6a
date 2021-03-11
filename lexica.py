@@ -24,7 +24,7 @@ class Lexica:
     tokens = [
                  'MAIS', 'MENOS', 'MULTIPLICACAO', 'DIVISAO', 'IGUALDADE', 'MAIOR', 'MENOR', 'MAIOR_IGUAL',
                  'MENOR_IGUAL', 'ABRE_PARENTESE', 'FECHA_PARENTESE', 'ABRE_COLCHETE', 'FECHA_COLCHETE', 'ID', 'NEGACAO',
-                 'DOIS_PONTOS', 'ATRIBUICAO', 'VIRGULA','ABRE_CHAVES','FECHA_CHAVES','COMENTARIO','NOTACAO_CIENTIFICA'
+                 'DOIS_PONTOS', 'ATRIBUICAO', 'VIRGULA','ABRE_CHAVES','FECHA_CHAVES','COMENTARIO','NUM_NOTACAO_CIENTIFICA'
              ] + list(reservadas.values())
 
     t_ABRE_CHAVES=r'\{'
@@ -66,9 +66,9 @@ class Lexica:
 
 
 
-    def t_NOTACAO_CIENTIFICA(self, t):
+    def t_NUM_NOTACAO_CIENTIFICA(self, t):
         r'[+|-]?[0-9]+(\.[0-9]+)(e(\+|\-)?(\d+))?'
-        t.type = self.reservadas.get(t.value, 'NOTACAO_CIENTIFICA')
+        t.type = self.reservadas.get(t.value, 'NUM_NOTACAO_CIENTIFICA')
         return t
 
     def t_COMENTARIO(self,t):
