@@ -95,12 +95,12 @@ class Lexica:
         return t
 
     def t_NUM_NOTACAO_CIENTIFICA(self, t):
-        r'[+|-]?[0-9]+(\.[0-9]+)(e(\+|\-)?(\d+))?'
+        r'\d+[eE][-+]?\d+|(\.\d+|\d+\.\d*)([eE][-+]?\d+)?'
         t.type = self.reservadas.get(t.value, 'NUM_NOTACAO_CIENTIFICA')
         return t
 
     def t_COMENTARIO(self, t):
-        r'\{.*?[^\}]+\}'
+        r'{[\d\D]*?}'
         t.type = self.reservadas.get(t.value, 'COMENTARIO')
         return t
 
