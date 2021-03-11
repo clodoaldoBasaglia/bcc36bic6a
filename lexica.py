@@ -19,8 +19,8 @@ class Lexica:
         'até': 'ATE',
         'leia': 'LEIA',
         'escreva': 'ESCREVA',
-        'inteiro': 'INTEIRO',
-        'principal': 'PRINCIPAL'
+        'inteiro': 'INTEIRO'
+#        'principal': 'PRINCIPAL'
     }
     tokens = [
         'MAIS',

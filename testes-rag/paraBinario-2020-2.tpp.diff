@@ -1,23 +1,7 @@
-1,3c1,2
-< Lexicanum
-< IDENTIFICADOR
-< ABRE_PAR
+13,14c13,81
+< Erro ';', linha 3
+< <class 'str'>
 ---
-> ID
-> ABRE_PARENTESE
-6,7c5,6
-< IDENTIFICADOR
-< FECHA_PAR
----
-> ID
-> FECHA_PARENTESE
-10c9
-< IDENTIFICADOR
----
-> ID
-11a11,41
-> NUM_INTEIRO
-> FECHA_COLCHETE
 > Caracter inválido ';'
 > INTEIRO
 > DOIS_PONTOS
@@ -47,7 +31,7 @@
 > DIVISAO
 > NUM_INTEIRO
 > FIM
-12a43,54
+> INTEIRO
 > DOIS_PONTOS
 > ID
 > ID
@@ -60,10 +44,7 @@
 > ID
 > ABRE_COLCHETE
 > ID
-14,15c56,81
-< Erro ';', linha 3
-< <class 'str'>
----
+> FECHA_COLCHETE
 > FECHA_PARENTESE
 > ID
 > ATRIBUICAO

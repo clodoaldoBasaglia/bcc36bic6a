@@ -1,37 +1,7 @@
-1d0
-< Lexicanum
-3,5c2,4
-< PRINCIPAL
-< ABRE_PAR
-< FECHA_PAR
----
-> ID
-> ABRE_PARENTESE
-> FECHA_PARENTESE
-8,9c7,8
-< IDENTIFICADOR
-< IDENTIFICADOR
----
-> ID
-> ID
-11c10
-< INTEIRO
----
-> NUM_INTEIRO
-14,16c13,15
-< IDENTIFICADOR
-< IGUALDADE
-< INTEIRO
----
-> ID
-> IGUAL
-> NUM_INTEIRO
-18,20c17,35
-< ABRE_PAR
+18,19c18,35
 < Erro '"', linha 6
 < <class 'str'>
 ---
-> ABRE_PARENTESE
 > Caracter inválido '"'
 > ID
 > NUM_INTEIRO
