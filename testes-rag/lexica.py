@@ -20,7 +20,7 @@ class Lexica:
         'leia': 'LEIA',
         'escreva': 'ESCREVA',
         'inteiro': 'INTEIRO'
-#        'principal': 'PRINCIPAL'
+        #        'principal': 'PRINCIPAL'
     }
     tokens = [
         'MAIS',
@@ -76,16 +76,13 @@ class Lexica:
     t_FECHA_CHAVES = r'}'
     t_ignore = ' \t'
 
-
-
-
     def t_ID(self, t):
         r'[a-zA-Zà-ú][0-9_a-zà-úA-Z]*'
         t.type = self.reservadas.get(t.value, 'ID')
         return t
 
     def t_NUM_PONTO_FLUTUANTE(self, t):
-        r'\d+[eE][-+]?\d+|(\.\d+|\d+\.\d*)([eE][-+]?\d+)?'
+        r'\d+\.?\d*e(\+|-)?\d+'
         t.type = self.reservadas.get(t.value, 'FLUTUANTE')
         return t
 
