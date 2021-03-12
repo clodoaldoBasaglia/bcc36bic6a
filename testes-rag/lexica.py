@@ -85,7 +85,7 @@ class Lexica:
         return t
 
     def t_NUM_PONTO_FLUTUANTE(self, t):
-         r'\d+\.?\d*e(\+|-)?\d+'
+        r'\d+[eE][-+]?\d+|(\.\d+|\d+\.\d*)([eE][-+]?\d+)?'
         t.type = self.reservadas.get(t.value, 'FLUTUANTE')
         return t
 

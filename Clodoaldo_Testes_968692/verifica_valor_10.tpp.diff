@@ -1,0 +1,22 @@
+18,19c18,35
+< Erro '"', linha 6
+< <class 'str'>
+---
+> Caracter inválido '"'
+> ID
+> NUM_INTEIRO
+> Caracter inválido '"'
+> FECHA_PARENTESE
+> FIM
+> ID
+> MAIS
+> MAIS
+> ID
+> ID
+> IGUAL
+> NUM_INTEIRO
+> ID
+> ABRE_PARENTESE
+> NUM_INTEIRO
+> FECHA_PARENTESE
+> FIM
